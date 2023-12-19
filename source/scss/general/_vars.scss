@@ -1,0 +1,49 @@
+// --------------- hex to rgba mixin ---------------
+@function HexToRGB($hex) {
+  @return red($hex), green($hex), blue($hex);
+}
+:root {
+// --------------- default global variable ---------------
+  --body-bg: #000;
+  --body-font-size: 16px;
+  --content-width: 1196px;
+  --container-offset: 15px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+
+// --------------- default JS variable ---------------
+
+
+// --------------- default scroll variable ---------------
+  --scrollbar-thumb: #202020;
+  --scrollbar-thumb-hover: #202020;
+  --scrollbar-track:  #000;
+  --scrollbar-track-hover: #000;
+  // --overlay-bg: rgba(0, 0, 0, 0.5);
+
+// // --------------- default slect variable ---------------
+//   --select-inner-bg: #404040;
+//   --select-inner-border: #FDFDFD;
+//   --select-focus-border: #FDFDFD;
+
+// --------------- default font-family variable ---------------
+  --font-family: "GazerSans",sans-serif; // var(--font-family);
+
+// --------------- default text color variable ---------------
+  // --burger-cl: #{HexToRGB(#00d655)};
+
+  --cl-a: #{HexToRGB(#ffffff)}; // rgba(var(--cl-a),1.0);
+  --cl-b: #{HexToRGB(#000000)}; // rgba(var(--cl-b),1.0);
+ 
+
+// --------------- default background cl variable ---------------
+  --bg-a: #{HexToRGB(#ffffff)}; // rgba(var(--bg-a),1.0);
+  --bg-b: #{HexToRGB(#000000)}; // rgba(var(--bg-b),1.0);
+
+
+// // --------------- default border cl variable ---------------
+//   --br-a: #3D3E5C; // var(--br-a);
+
+// // --------------- default gradient variable ---------------
+//   --gradient-a: linear-gradient(67.09deg, #000000 34.46%, rgba(0, 0, 0, 0) 57.86%);
+
+}

@@ -1,0 +1,28 @@
+.info-section{
+    overflow: hidden;
+    background-color: rgba(var(--bg-a),1.0);
+    padding: clamp(25px, 5.602vw, 67px) 0;
+    &__box{
+        display: grid;
+        grid-template-columns: .82fr 1fr;
+        grid-gap: clamp(25px, 10.0334vw, 120px);
+
+        @include tablet{
+            grid-gap: clamp(20px, 2.441vw, 25px);
+        }
+
+        @include small-tablet{
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__inner{
+        display: flex;
+        flex-direction: column;
+        grid-gap: clamp(10px, 1.6722vw, 20px);
+    }
+
+    p{
+        color: rgba(var(--cl-b),1.0);
+    }
+}

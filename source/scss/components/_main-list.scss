@@ -1,0 +1,29 @@
+.main-list{
+    display: flex;
+    flex-direction: column;
+     
+
+    &__item{
+        &:nth-child(even){
+            .main-row{
+                flex-direction: row-reverse;
+
+                &__image{
+                    left: 50%;
+                    transform: translateX(-15%);
+
+                    @include laptop{
+                        transform: translateX(-19%);
+                    }
+                    @include small-tablet{
+                        left: initial;
+                        transform: none;
+                    }
+                }
+                @include small-tablet{
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+}
