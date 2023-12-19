@@ -1,32 +1,36 @@
-.title{
-    color: rgba(var(--cl-a),1.0);
+.first-section,
+.info-section,
+.about-section {
+  .title {
+    color: rgba(var(--cl-a), 1);
     font-family: var(--font-family);
     font-size: clamp(20px, 2.5084vw, 30px);
     font-style: normal;
     font-weight: 700;
     line-height: normal;
 
-    &--big{
-        text-align: center;
-        font-size: clamp(24px, 4.5987vw, 55px);
+    &--big {
+      text-align: center;
+      font-size: clamp(24px, 4.5987vw, 55px);
     }
 
-    &--black{
-        color: rgba(var(--cl-b),1.0);
+    &--black {
+      color: rgba(var(--cl-b), 1);
     }
-    @include small-tablet{
-        text-align: center;
-      }
-}
+    @include small-tablet {
+      text-align: center;
+    }
+  }
 
-.subtitle{
-    color: rgba(var(--cl-a),1.0);
+  .subtitle {
+    color: rgba(var(--cl-a), 1);
     font-family: var(--font-family);
     font-size: clamp(20px, 2.1739vw, 26px);
     font-style: normal;
     font-weight: 700;
     line-height: 140%;
-    @include small-tablet{
-        text-align: center;
-      }
+    @include small-tablet {
+      text-align: center;
+    }
+  }
 }
