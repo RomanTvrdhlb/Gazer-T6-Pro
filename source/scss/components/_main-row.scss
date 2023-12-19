@@ -61,6 +61,9 @@
             @include laptop{
                 max-width: 53%;
             }
+            @include small-tablet{
+                max-width: 100%;
+            }
         }
     }
 
@@ -70,6 +73,9 @@
 
             @include laptop{
                 max-width: 51%;
+            }
+            @include small-tablet{
+                max-width: 100%;
             }
         }
     }
