@@ -53,4 +53,24 @@
     @include small-tablet{
         flex-direction: column;
     }
+
+    &--mode{
+        .main-row__box{
+            max-width: 51%;
+
+            @include laptop{
+                max-width: 53%;
+            }
+        }
+    }
+
+    &--camera{
+        .main-row__box{
+            max-width: 50%;
+
+            @include laptop{
+                max-width: 51%;
+            }
+        }
+    }
 }
