@@ -182,53 +182,53 @@ const scripts = () => {
     //   console.error('WEBPACK ERROR', err);
     //   this.emit('end');
     // })
-    // .pipe(dest(paths.buildJsFolder))
-    // .pipe(browserSync.stream());
+    .pipe(dest(paths.buildJsFolder))
+    .pipe(browserSync.stream());
 }
 
 // scripts backend
 const scriptsBackend = () => {
   return src(paths.srcMainJs)
-    // .pipe(plumber(
-    //   notify.onError({
-    //     title: "JS",
-    //     message: "Error: <%= error.message %>"
-    //   })
-    // ))
-    // .pipe(webpackStream({
-    //   mode: 'development',
-    //   output: {
-    //     filename: 'main.js',
-    //   },
-    //   module: {
-    //     rules: [{
-    //       test: /\.m?js$/,
-    //       exclude: /node_modules/,
-    //       use: {
-    //         loader: 'babel-loader',
-    //         options: {
-    //           presets: [
-    //             ['@babel/preset-env', {
-    //               targets: "defaults"
-    //             }]
-    //           ]
-    //         }
-    //       }
-    //     }]
-    //   },
-    //   devtool: false,
-    //   resolve: {
-    //     fallback: {
-    //       "path": require.resolve("path-browserify")
-    //     }
-    //   } 
-    // }))
-    // .on('error', function (err) {
-    //   console.error('WEBPACK ERROR', err);
-    //   this.emit('end');
-    // })
-    // .pipe(dest(paths.buildJsFolder))
-    // .pipe(browserSync.stream());
+    .pipe(plumber(
+      notify.onError({
+        title: "JS",
+        message: "Error: <%= error.message %>"
+      })
+    ))
+    .pipe(webpackStream({
+      mode: 'development',
+      output: {
+        filename: 'main.js',
+      },
+      module: {
+        rules: [{
+          test: /\.m?js$/,
+          exclude: /node_modules/,
+          use: {
+            loader: 'babel-loader',
+            options: {
+              presets: [
+                ['@babel/preset-env', {
+                  targets: "defaults"
+                }]
+              ]
+            }
+          }
+        }]
+      },
+      devtool: false,
+      resolve: {
+        fallback: {
+          "path": require.resolve("path-browserify")
+        }
+      } 
+    }))
+    .on('error', function (err) {
+      console.error('WEBPACK ERROR', err);
+      this.emit('end');
+    })
+    .pipe(dest(paths.buildJsFolder))
+    .pipe(browserSync.stream());
 }
 
 const resources = () => {

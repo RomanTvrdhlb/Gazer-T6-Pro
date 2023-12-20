@@ -16,7 +16,7 @@
                         transform: translateX(-19%);
                     }
                     @include small-tablet{
-                        left: initial;
+                        left: -2%;
                         transform: none;
                     }
                 }
@@ -25,5 +25,9 @@
                 }
             }
         }
+    }
+
+    @include small-tablet{
+        grid-gap: clamp(30px, 5.208vw, 40px);
     }
 }

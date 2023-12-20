@@ -4,14 +4,14 @@
   .title {
     color: rgba(var(--cl-a), 1);
     font-family: var(--font-family);
-    font-size: clamp(20px, 2.5084vw, 30px);
+    font-size: clamp(18px, 2.5084vw, 30px);
     font-style: normal;
     font-weight: 700;
     line-height: normal;
 
     &--big {
       text-align: center;
-      font-size: clamp(24px, 4.5987vw, 55px);
+      font-size: clamp(22px, 4.5987vw, 55px);
     }
 
     &--black {
@@ -25,7 +25,7 @@
   .subtitle {
     color: rgba(var(--cl-a), 1);
     font-family: var(--font-family);
-    font-size: clamp(20px, 2.1739vw, 26px);
+    font-size: clamp(16px, 2.1739vw, 26px);
     font-style: normal;
     font-weight: 700;
     line-height: 140%;
